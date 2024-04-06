@@ -59,15 +59,14 @@ class MentorsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_mentor
-      @mentor = Mentor.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def mentor_params
-      params.fetch(:mentor, {}).permit(:name, :email)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_mentor
+    @mentor = Mentor.find(params[:id])
+  end
 
-
+  # Only allow a list of trusted parameters through.
+  def mentor_params
+    params.fetch(:mentor, {}).permit(:name, :email)
+  end
 end

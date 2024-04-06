@@ -1,8 +1,8 @@
-require 'rails_helper'
+require "rails_helper"
 
 RSpec.describe "mentees/show", type: :view do
   before(:each) do
-    assign(:mentee, Mentee.create!(email: 'lala@email.com', name: 'lala'))
+    assign(:mentee, create(:mentee))
   end
 
   it "renders attributes in <p>" do

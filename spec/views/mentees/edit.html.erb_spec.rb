@@ -1,9 +1,7 @@
-require 'rails_helper'
+require "rails_helper"
 
 RSpec.describe "mentees/edit", type: :view do
-  let(:mentee) {
-    Mentee.create!(email: 'lala@email.com', name: 'lala')
-  }
+  let(:mentee) { create(:mentee) }
 
   before(:each) do
     assign(:mentee, mentee)

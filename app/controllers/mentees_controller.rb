@@ -52,13 +52,14 @@ class MenteesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_mentee
-      @mentee = Mentee.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def mentee_params
-      params.fetch(:mentee, {}).permit(:name, :email, :bio)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_mentee
+    @mentee = Mentee.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def mentee_params
+    params.fetch(:mentee, {}).permit(:name, :email, :bio)
+  end
 end

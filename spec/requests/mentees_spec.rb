@@ -1,7 +1,6 @@
-require 'rails_helper'
+require "rails_helper"
 
 RSpec.describe "/mentees", type: :request do
-  
   let(:valid_attributes) {
     skip("Add a hash of attributes valid for your model")
   }
@@ -46,12 +45,12 @@ RSpec.describe "/mentees", type: :request do
     context "with valid parameters" do
       it "creates a new Mentee" do
         expect {
-          post mentees_url, params: { mentee: valid_attributes }
+          post mentees_url, params: {mentee: valid_attributes}
         }.to change(Mentee, :count).by(1)
       end
 
       it "redirects to the created mentee" do
-        post mentees_url, params: { mentee: valid_attributes }
+        post mentees_url, params: {mentee: valid_attributes}
         expect(response).to redirect_to(mentee_url(Mentee.last))
       end
     end
@@ -59,16 +58,14 @@ RSpec.describe "/mentees", type: :request do
     context "with invalid parameters" do
       it "does not create a new Mentee" do
         expect {
-          post mentees_url, params: { mentee: invalid_attributes }
+          post mentees_url, params: {mentee: invalid_attributes}
         }.to change(Mentee, :count).by(0)
       end
 
-    
       it "renders a response with 422 status (i.e. to display the 'new' template)" do
-        post mentees_url, params: { mentee: invalid_attributes }
+        post mentees_url, params: {mentee: invalid_attributes}
         expect(response).to have_http_status(:unprocessable_entity)
       end
-    
     end
   end
 
@@ -80,27 +77,25 @@ RSpec.describe "/mentees", type: :request do
 
       it "updates the requested mentee" do
         mentee = Mentee.create! valid_attributes
-        patch mentee_url(mentee), params: { mentee: new_attributes }
+        patch mentee_url(mentee), params: {mentee: new_attributes}
         mentee.reload
         skip("Add assertions for updated state")
       end
 
       it "redirects to the mentee" do
         mentee = Mentee.create! valid_attributes
-        patch mentee_url(mentee), params: { mentee: new_attributes }
+        patch mentee_url(mentee), params: {mentee: new_attributes}
         mentee.reload
         expect(response).to redirect_to(mentee_url(mentee))
       end
     end
 
     context "with invalid parameters" do
-    
       it "renders a response with 422 status (i.e. to display the 'edit' template)" do
         mentee = Mentee.create! valid_attributes
-        patch mentee_url(mentee), params: { mentee: invalid_attributes }
+        patch mentee_url(mentee), params: {mentee: invalid_attributes}
         expect(response).to have_http_status(:unprocessable_entity)
       end
-    
     end
   end
 
