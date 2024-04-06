@@ -1,0 +1,2 @@
+[1mCould not find generator 'factory_bot'. ([1;4mRails::Command::CorrectableNameError[m[1m)[m
+Run `bin/rails generate --help` for more options.

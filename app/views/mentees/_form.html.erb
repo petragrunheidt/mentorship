@@ -1,0 +1,17 @@
+<%= form_with(model: mentee) do |form| %>
+  <% if mentee.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(mentee.errors.count, "error") %> prohibited this mentee from being saved:</h2>
+
+      <ul>
+        <% mentee.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
