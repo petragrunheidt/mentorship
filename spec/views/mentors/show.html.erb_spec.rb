@@ -1,8 +1,8 @@
-require 'rails_helper'
+require "rails_helper"
 
 RSpec.describe "mentors/show", type: :view do
   before(:each) do
-    assign(:mentor, Mentor.create!(email: "fake@email.com", name: "Fake Name"))
+    assign(:mentor, create(:mentor))
   end
 
   it "renders attributes in <p>" do
