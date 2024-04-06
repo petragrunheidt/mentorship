@@ -1,6 +1,6 @@
 class MenteesController < ApplicationController
   before_action :set_mentee, only: %i[ show edit update destroy ]
-  # before_action :authenticate_user!
+  before_action :authenticate_user!
 
   def index
     @mentees = Mentee.all

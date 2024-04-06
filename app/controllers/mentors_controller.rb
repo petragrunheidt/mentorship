@@ -1,7 +1,7 @@
 class MentorsController < ApplicationController
   before_action :set_mentor, only: %i[ show edit update destroy ]
-  # before_action :authenticate_user!
-  
+  before_action :authenticate_user!
+
   # GET /mentors or /mentors.json
   def index
     @mentors = Mentor.all

@@ -1,0 +1,24 @@
+<div class="relative flex min-h-screen flex-col justify-center bg-white py-6 text-black sm:py-12">
+  <div class="flex flex-col items-center space-y-20">
+    <div class="flex items-center space-x-10">
+      <%= link_to "Sign In", new_user_session_path, class: "rounded border-2 border-rose-500 px-4 py-2 font-bold text-black hover:bg-rose-500 hover:text-yellow-900 focus:outline-none" %>
+      <%= link_to "Sign Up", new_user_registration_path, class: "rounded border-2 border-rose-500 px-4 py-2 font-bold text-black hover:bg-rose-500 hover:text-yellow-900 focus:outline-none" %>
+    </div>
+  </div>
+  <div class="flex flex-col items-center">
+    <%= image_tag("logo_rails_girl.jpeg", class: "m-10 h-1/4 w-1/3") %>
+  </div>
+
+  <div class="flex flex-col items-center space-y-20">
+    <div class="flex flex-col items-center">
+      <h2>Bem-vindo</h2>
+      <h3>Escolha uma das opções abaixo</h3>
+    </div>
+
+    <div class="flex space-x-10">
+      <%= link_to "Quero ser mentora", new_mentor_path, class: "rounded border-2 border-rose-500 px-4 py-2 font-bold text-black hover:bg-rose-500 hover:text-white focus:outline-none" %>
+      <%= link_to "Quero ser mentorada", new_mentee_path, class: "rounded border-2 border-red-200 px-4 py-2 font-bold text-black hover:bg-rose-500 hover:text-white focus:outline-none" %>
+    </div>
+
+  </div>
+</div>
