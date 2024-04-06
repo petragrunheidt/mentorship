@@ -1,8 +1,8 @@
-require 'rails_helper'
+require "rails_helper"
 
 RSpec.describe "mentees/new", type: :view do
   before(:each) do
-    assign(:mentee, Mentee.new(email: 'lala@email.com', name: 'lala'))
+    assign(:mentee, build(:mentee))
   end
 
   it "renders new mentee form" do

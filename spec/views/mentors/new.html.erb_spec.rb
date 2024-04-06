@@ -1,8 +1,8 @@
-require 'rails_helper'
+require "rails_helper"
 
 RSpec.describe "mentors/new", type: :view do
   before(:each) do
-    assign(:mentor, Mentor.new())
+    assign(:mentor, build(:mentor))
   end
 
   it "renders new mentor form" do

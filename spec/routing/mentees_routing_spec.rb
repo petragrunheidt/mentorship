@@ -18,7 +18,6 @@ RSpec.describe MenteesController, type: :routing do
       expect(get: "/mentees/1/edit").to route_to("mentees#edit", id: "1")
     end
 
-
     it "routes to #create" do
       expect(post: "/mentees").to route_to("mentees#create")
     end

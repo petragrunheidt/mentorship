@@ -1,8 +1,8 @@
-require 'rails_helper'
+require "rails_helper"
 
 RSpec.describe "mentors/edit", type: :view do
   let(:mentor) {
-    Mentor.create!(email: "fake@email.com", name: "Fake Name")
+    create(:mentor)
   }
 
   before(:each) do
