@@ -34,6 +34,8 @@ ENV BUNDLE_GITHUB__COM $BUNDLE_GITHUB__COM
 
 RUN gem install bundler:2.5.7
 
+RUN gem install tailwindcss-rails
+
 COPY Gemfile Gemfile.lock /app/
 
 RUN bundle install -j "$(nproc)"

@@ -28,6 +28,10 @@ FileUtils.chdir APP_ROOT do
   puts "\n== Removing old logs and tempfiles =="
   system! "bin/rails log:clear tmp:clear"
 
+  puts "\n== Installing tailwind =="
+  system! "bin/rails tailwindcss:install"
+
   puts "\n== Restarting application server =="
-  system! "bin/rails restart"
+  # system! "bin/rails restart"
+  system! "bin/dev"
 end
