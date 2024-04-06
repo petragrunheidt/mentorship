@@ -58,6 +58,6 @@ class MenteesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def mentee_params
-      params.fetch(:mentee, {})
+      params.fetch(:mentee, {}).permit(:name, :email, :bio)
     end
 end
