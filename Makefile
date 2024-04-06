@@ -22,7 +22,7 @@ run: up
 	docker-compose exec app rails db:drop db:setup
 
 run-debugging:
-	docker attach $$(docker ps -f name=mentorship-app-1 -q)
+	docker attach $$(docker ps -f name=mentorship_app_1 -q)
 
 rebuild: down build run
 
